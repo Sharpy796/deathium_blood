@@ -1,0 +1,1 @@
+addGlimmer("Deathium", "Gives a projectile a deadly sparkly trail", {"just_death"}, nil, 30, "4,5,6,10", 6.21)
