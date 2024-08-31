@@ -2,6 +2,8 @@
     name="Deathium Blood"
     description="Everything bleeds Instant Deathium... including you. Now with compatibility in other mods!
 
-This mod will function regardless of its position in your mod list, but if you want perk descriptions to be accurate, place this mod *below* any mods that add perks that change the player's blood type. If you aren't sure if any of your mods do this, place this mod below them anyway; it won't hurt anything."
+This mod will function regardless of its position in your mod list, but if you want perk descriptions to be accurate, place this mod [i]below[/i] any mods that add perks that change the player's blood type. If you aren't sure if any of your mods do this, place this mod below them anyway; it won't hurt anything.
+
+This mod should also be placed [i]above[/i] Glimmers Expanded, if you are running that alongside this mod."
     tags="gameplay, funny"
 ></Mod>

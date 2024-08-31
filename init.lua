@@ -4,8 +4,9 @@ translations = translations .. new_translations
 translations = translations:gsub("\r", ""):gsub("\n\n+", "\n")
 ModTextFileSetContent("data/translations/common.csv", translations)
 
+-- Glimmers Expanded compat
 if ModIsEnabled("GlimmersExpanded") then
-	ModLuaFileAppend("mods/GlimmersExpanded/files/addGlimmers.lua", "mods/deathium_blood/newGlimmers.lua")
+	ModLuaFileAppend("mods/GlimmersExpanded/files/lib/glimmer_data.lua", "mods/deathium_blood/newGlimmers.lua")
 end
 
 function OnWorldPostUpdate()
