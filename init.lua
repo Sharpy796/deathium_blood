@@ -1,12 +1,18 @@
-local translations = ModTextFileGetContent("data/translations/common.csv")
-local new_translations = ModTextFileGetContent("mods/deathium_blood/translations.csv")
-translations = translations .. new_translations
-translations = translations:gsub("\r", ""):gsub("\n\n+", "\n")
-ModTextFileSetContent("data/translations/common.csv", translations)
+local function updateTranslations()
+	local translations = ModTextFileGetContent("data/translations/common.csv")
+	local new_translations = ModTextFileGetContent("mods/deathium_blood/translations.csv")
+	translations = translations .. new_translations
+	translations = translations:gsub("\r", ""):gsub("\n\n+", "\n")
+	ModTextFileSetContent("data/translations/common.csv", translations)
+end
 
 -- Glimmers Expanded compat
 if ModIsEnabled("GlimmersExpanded") then
 	ModLuaFileAppend("mods/GlimmersExpanded/files/lib/glimmer_data.lua", "mods/deathium_blood/newGlimmers.lua")
+end
+
+function OnModPreInit()
+	updateTranslations()
 end
 
 function OnWorldPostUpdate()
